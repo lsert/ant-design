@@ -11,12 +11,12 @@ export interface RcFile extends File {
   lastModifiedDate: Date;
 }
 
-export interface UploadFile {
+export interface UploadFile extends File {
   uid: string;
   size: number;
   name: string;
   fileName?: string;
-  lastModified?: number;
+  lastModified: number;
   lastModifiedDate?: Date;
   url?: string;
   status?: UploadFileStatus;
