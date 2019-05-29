@@ -14,10 +14,10 @@ export interface RcFile extends File {
 export interface UploadFile extends File {
   uid: string;
   size: number;
-  name: string;
+  readonly name: string;
   fileName?: string;
-  lastModified: number;
-  lastModifiedDate?: Date;
+  readonly lastModified: number;
+  readonly lastModifiedDate?: Date;
   url?: string;
   status?: UploadFileStatus;
   percent?: number;
@@ -27,7 +27,7 @@ export interface UploadFile extends File {
   error?: any;
   linkProps?: any;
   type: string;
-  webkitRelativePath?: string;
+  readonly webkitRelativePath?: string;
 }
 
 export interface UploadChangeParam<T extends object = UploadFile> {
